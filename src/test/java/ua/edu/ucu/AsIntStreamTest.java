@@ -20,33 +20,33 @@ public class AsIntStreamTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testEmptyMaxStream(){
+    public void testEmptyMaxStream() {
         int result = emptyStream.max();
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testEmptyMinStream(){
+    public void testEmptyMinStream() {
         int result = emptyStream.min();
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testEmptyReduceStream(){
+    public void testEmptyReduceStream() {
         int result = emptyStream.reduce(0, Integer::sum);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testEmptySumStream(){
+    public void testEmptySumStream() {
         int result = emptyStream.sum();
     }
 
     @Test(expected = IllegalStateException.class)
-    public void testCallAfterTerminating(){
+    public void testCallAfterTerminating() {
         exampleStream.min();
         exampleStream.max();
     }
 
     @Test
-    public void testStreamCount(){
+    public void testStreamCount() {
         long expectedResult = 5;
         long result = exampleStream.count();
         assertEquals(expectedResult, result);

@@ -34,13 +34,13 @@ public class AsIntStream implements IntStream {
         isTerminated = true;
         int count;
         double sum = 0;
-        if (iterator.hasNext()){
+        if (iterator.hasNext()) {
             sum += iterator.next();
             count = 1;
         } else {
             throw new IllegalArgumentException("Size is 0");
         }
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             sum += iterator.next();
             count++;
         }
@@ -62,7 +62,7 @@ public class AsIntStream implements IntStream {
         checkIfTerminated();
         isTerminated = true;
         int count = 0;
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             iterator.next();
             count++;
         }
@@ -88,7 +88,7 @@ public class AsIntStream implements IntStream {
     public void forEach(IntConsumer action) {
         checkIfTerminated();
         isTerminated = true;
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             action.accept(iterator.next());
         }
     }
@@ -116,13 +116,13 @@ public class AsIntStream implements IntStream {
         checkIfTerminated();
         isTerminated = true;
         int result;
-        if(iterator.hasNext()){
+        if (iterator.hasNext()) {
             result = op.apply(identity, iterator.next());
         } else {
             throw new IllegalArgumentException("Size is 0");
         }
 
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             result = op.apply(result, iterator.next());
         }
 
@@ -135,7 +135,7 @@ public class AsIntStream implements IntStream {
         isTerminated = true;
         int[] streamNumbers = new int[size];
         int i = 0;
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             streamNumbers[i] = iterator.next();
             i++;
         }

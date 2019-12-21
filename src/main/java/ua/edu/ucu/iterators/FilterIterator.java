@@ -16,9 +16,9 @@ public class FilterIterator implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             Integer nextValue = iterator.next();
-            if(pr.test(nextValue)){
+            if (pr.test(nextValue)) {
                 nextV = nextValue;
                 return true;
             }

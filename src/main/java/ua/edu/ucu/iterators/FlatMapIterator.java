@@ -21,11 +21,11 @@ public class FlatMapIterator implements Iterator<Integer> {
 
     @Override
     public boolean hasNext() {
-        if(currentIterator.hasNext()){
+        if (currentIterator.hasNext()) {
             nextV = currentIterator.next();
             return true;
         }
-        if(iterator.hasNext()){
+        if (iterator.hasNext()) {
             AsIntStream stream = (AsIntStream) function.applyAsIntStream(iterator.next());
             currentIterator = new BaseIterator(stream.toArray());
             nextV = currentIterator.next();
