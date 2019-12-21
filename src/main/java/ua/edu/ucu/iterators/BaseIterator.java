@@ -1,6 +1,5 @@
 package ua.edu.ucu.iterators;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class BaseIterator implements Iterator<Integer> {
@@ -8,7 +7,7 @@ public class BaseIterator implements Iterator<Integer> {
     int i;
 
     public BaseIterator(int[] values) {
-        this.values = values;
+        this.values = values.clone();
         i = 0;
     }
 

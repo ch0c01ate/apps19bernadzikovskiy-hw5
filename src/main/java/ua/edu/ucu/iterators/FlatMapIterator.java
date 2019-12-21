@@ -2,7 +2,6 @@ package ua.edu.ucu.iterators;
 
 import ua.edu.ucu.function.IntToIntStreamFunction;
 import ua.edu.ucu.stream.AsIntStream;
-import ua.edu.ucu.stream.IntStream;
 
 import java.util.Iterator;
 
